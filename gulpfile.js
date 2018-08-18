@@ -2,6 +2,9 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 
+var gulp        = require('gulp');
+var deploy      = require('gulp-gh-pages');
+
 
 
 // Compile sass into CSS & auto-inject into browsers
@@ -32,8 +35,6 @@ gulp.task('serve', ['sass'], function() {
 
 gulp.task('default', ['js','serve']);
 
-var gulp        = require('gulp');
-var deploy      = require('gulp-gh-pages');
 
 /**
  * Push build to gh-pages
